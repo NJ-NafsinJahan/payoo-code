@@ -28,11 +28,15 @@
 
 <body class=" min-h-screen max-w-md bg-base-200 mx-auto">
 
-    <header class="border-b-2 border-gray-500">
+    <header class="border-b-2 border-gray-300">
         <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
-            <div class="left">
+            <div class="left flex gap-1">
                 <div class="logo w-[60px]">
                     <img src="./assets/logo.png" alt="">
+                </div>
+                <div class="balance-info">
+                    <h2 class="text-2xl font-bold">$<span id="balance">45000</span></h2>
+                    <p class="text-neutral/50">Available Balance</p>
                 </div>
             </div>
             <div class="right">
@@ -43,6 +47,69 @@
 
         </section>
     </header>
+
+    <section class="w-11/12 mx-auto py-10 space-y-5">
+        <h2 class="text-3xl font-bold">Welcome to Pay<span class="text-primary">oo</span></h2>
+        <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+
+        <div class="buttons grid grid-cols-3 gap-3 ">
+            <button class="btn flex flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-1.png" alt="">
+                <p class="text-sm text-[#080808]/70 whitespace-nowrap">Add Money</p>
+            </button>
+            <button class="btn flex flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-2.png" alt="">
+                <p class="text-sm text-[#080808]/70 whitespace-nowrap">Cashout</p>
+            </button>
+            <button class="btn flex flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-3.png" alt="">
+                <p class="text-sm text-[#080808]/70 whitespace-nowrap">Transfer Money</p>
+            </button>
+            <button class="btn flex flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-4.png" alt="">
+                <p class="text-sm text-[#080808]/70 whitespace-nowrap">Get Bonus</p>
+            </button>
+            <button class="btn flex flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-5.png" alt="">
+                <p class="text-sm text-[#080808]/70 whitespace-nowrap">Pay Bill</p>
+            </button>
+            <button class="btn flex flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-6.png" alt="">
+                <p class="text-sm text-[#080808]/70 whitespace-nowrap">Transactions</p>
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="cashout" class="w-11/12 mx-auto py-5">
+        <h2 class="font-bold text-xl"> Cashout</h2>
+        <div class="form pt-10">
+            <div class="card bg-base-100 w-full shrink-0 shadow mx-auto rounded-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label font-bold text-[#080808]">Agent Number</label>
+                        <input id="cashout-number" maxlength="11" minlength="11" type="text"
+                            class="input rounded-full bg-base-200 w-full" placeholder="Enter agent 11 Digit number" />
+                        <br>
+                        <label class="label font-bold text-[#080808]">Amount</label>
+                        <input id="cashout-amount" type="number" class="input rounded-full bg-base-200 w-full "
+                            placeholder="Enter amount to withdraw" />
+                        <br>
+                        <label class="label font-bold text-[#080808]">Pin Number</label>
+                        <input id="cashout-pin" maxlength="4" minlength="4" type="password"
+                            class="input rounded-full bg-base-200  w-full" placeholder="Enter 4 Digit Pin number" />
+                        <div></div>
+                        <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full bg-[#3B25C1] ">Withdraw
+                            Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./script/cashout.js"></script>
 </body>
 
 </html>
